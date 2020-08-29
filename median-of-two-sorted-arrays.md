@@ -1,5 +1,9 @@
 # 합병정렬
 
+Runtime: 128 ms
+Memory Usage: 41.6 MB
+
+```
 var findMedianSortedArrays = function(nums1, nums2) {
     var joinArr = [];
     var len = nums1.length + nums2.length;
@@ -25,10 +29,14 @@ var findMedianSortedArrays = function(nums1, nums2) {
     }
     return (len%2 !==0)? joinArr[mIdx] : (joinArr[mIdx-1]+joinArr[mIdx])/2;
 };
-
+```
 
 # 내장 함수
 
+Runtime: 156 ms
+Memory Usage: 43.3 MB
+
+```
 var findMedianSortedArrays = function(nums1, nums2) {
     var union = nums1.concat(nums2);
     union.sort(function(a,b){return a-b});
@@ -36,3 +44,4 @@ var findMedianSortedArrays = function(nums1, nums2) {
     var mIdx = Math.floor(len/2);
     return (len%2 !== 0)? union[mIdx] : (union[mIdx-1]+union[mIdx])/2;
 };
+```
